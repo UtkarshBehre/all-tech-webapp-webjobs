@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 namespace all_tech_webapp_webjobs
 {
 
-    public class EmailDigestions
+    public class EmailDigestionsJobs
     {
         [Singleton]
-        public static void ProcessQueueMessage([TimerTrigger(TimerConstants.EVERY_TWO_MINUTES, RunOnStartup = true)] TimerInfo timerinfo, ILogger logger)
+        public static void SendOutWeeklyEmails([TimerTrigger(TimerConstants.EVERY_TWO_MINUTES, RunOnStartup = true)] TimerInfo timerinfo, ILogger logger)
         {
             logger.LogInformation($"Processing message: {DateTimeOffset.Now}");
         }

@@ -9,5 +9,7 @@ namespace all_tech_webapp_webjobs
     public class TimerConstants
     {
         public const string EVERY_TWO_MINUTES = "*/2 * * * *";
+
+        public const string EVERY_MINUTE = "*/1 * * * *";
     }
 }
