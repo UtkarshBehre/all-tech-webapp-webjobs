@@ -12,9 +12,9 @@ namespace all_tech_webapp_webjobs
     public class EmailDigestionsJobs
     {
         [Singleton]
-        public static void SendOutWeeklyEmails([TimerTrigger(TimerConstants.EVERY_TWO_MINUTES, RunOnStartup = true)] TimerInfo timerinfo, ILogger logger)
+        public static void SendOutWeeklyEmails([TimerTrigger(TimerConstants.EVERY_WEEK_ON_SUNDAY, RunOnStartup = true)] TimerInfo timerinfo, ILogger logger)
         {
-            logger.LogInformation($"Processing message: {DateTimeOffset.Now}");
+            logger.LogInformation($"Sending out Emails Now: {DateTimeOffset.Now}");
         }
     }
 }
